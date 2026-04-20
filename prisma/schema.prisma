@@ -1,0 +1,121 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+///////////////////////
+// USER
+///////////////////////
+model User {
+  id       String @id @default(uuid())
+  name     String
+  email    String @unique
+  password String
+  points   Int    @default(0)
+
+  bookings Booking[]
+  reviews  Review[]
+
+  createdAt DateTime @default(now())
+
+  @@index([email])
+}
+
+///////////////////////
+// BOOKING
+///////////////////////
+model Booking {
+  id           String @id @default(uuid())
+  destination  String
+  price        Int
+  pointsEarned Int
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+}
+
+///////////////////////
+// REVIEW
+///////////////////////
+model Review {
+  id          String   @id @default(uuid())
+  name        String
+  email       String
+  rating      Int
+  comment     String
+  destination String?
+  avatar      String?
+  date        DateTime @default(now())
+
+  userId String?
+  user   User?   @relation(fields: [userId], references: [id], onDelete: SetNull)
+}
+
+///////////////////////
+// TRIP (CMS CORE - FINAL FIXED)
+///////////////////////
+model Trip {
+  id String @id @default(uuid())
+
+  slug     String @unique
+  category String   // 🔥 IMPORTANT (india / international / honeymoon)
+
+  title    String
+  duration String
+  price    String
+
+  pickupDrop String?
+  routeLine  String?
+
+  overview String
+
+  banner String[]   // 🔥 hero images
+  images String[]    // gallery images
+
+  itinerary    Itinerary[]
+  similarTrips SimilarTrip[]
+
+  createdAt DateTime @default(now())
+
+  @@index([category])
+  @@index([slug])
+}
+
+///////////////////////
+// ITINERARY
+///////////////////////
+model Itinerary {
+  id          String @id @default(uuid())
+  title       String
+  description String
+
+  tripId String
+  trip   Trip   @relation(fields: [tripId], references: [id], onDelete: Cascade)
+}
+
+///////////////////////
+// SIMILAR TRIPS
+///////////////////////
+model SimilarTrip {
+  id String @id @default(uuid())
+
+  title    String
+  price    String
+  duration String
+  location String
+  date     String
+  batch    String
+  image    String
+  slug     String
+
+  tripId String
+  trip   Trip   @relation(fields: [tripId], references: [id], onDelete: Cascade)
+}

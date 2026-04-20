@@ -1,0 +1,13 @@
+/* best.css */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.flex-shrink-0 {
+  scroll-snap-align: start;
+}

@@ -1,0 +1,238 @@
+[
+  {
+    "slug": "gg",
+    "title": "gg",
+    "price": "gg",
+    "duration": "gg",
+    "overview": "ljflsjflsjfl",
+    "pickupDrop": "gg",
+    "routeLine": "jdlfj",
+    "banner": "",
+    "images": [],
+    "itinerary": [],
+    "similarTrips": []
+  },
+  {
+    "slug": "bali",
+    "title": "bali",
+    "price": "bsli",
+    "duration": "ldfjl",
+    "overview": "ldjslfjslfjlsjfa",
+    "pickupDrop": "fjdsljdfl",
+    "routeLine": "fjdslfjdl",
+    "banner": "",
+    "images": [],
+    "itinerary": [],
+    "similarTrips": []
+  },
+  {
+    "slug": "goa",
+    "title": "goa",
+    "price": "999",
+    "duration": "10d 11n",
+    "overview": "flWhat is Lorem Ipsum?\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\n\r\nWhy do we use it?\r\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+    "pickupDrop": "delhi to goa",
+    "routeLine": "jfdskdfj",
+    "banner": "",
+    "images": [],
+    "itinerary": [],
+    "similarTrips": []
+  },
+  {
+    "slug": "\"test\"",
+    "title": "\"test\"",
+    "price": "\"test\"",
+    "duration": "\"te5\"",
+    "overview": "\"dsljlsfjlsjf\"",
+    "pickupDrop": "\"\"",
+    "routeLine": "\"5es\"",
+    "banner": "",
+    "images": [],
+    "itinerary": [],
+    "similarTrips": []
+  },
+  {
+    "slug": "test1",
+    "title": "dsjflsj",
+    "price": "fldsjl",
+    "duration": "lfdsjfl",
+    "overview": "jfdlsjdflsjfdl",
+    "pickupDrop": "",
+    "routeLine": "5es",
+    "banner": "",
+    "images": [],
+    "itinerary": [],
+    "similarTrips": []
+  },
+  {
+    "slug": "test2",
+    "title": "test",
+    "price": "test",
+    "duration": "dlsjflsjl",
+    "overview": "ljfldsjlsjfl",
+    "pickupDrop": "jljsldfjl",
+    "routeLine": "jlfdsjlfj",
+    "banner": [
+      "/uploads/1776611417713-134037218404328507.jpg",
+      "/uploads/1776611417718-134089151646757051.jpg"
+    ],
+    "images": [
+      "/uploads/1776611417740-134089151646757051.jpg",
+      "/uploads/1776611417744-134055365227626200.jpg"
+    ],
+    "itinerary": [],
+    "similarTrips": []
+  },
+  {
+    "slug": "test4",
+    "title": "ldsjfljslfjl",
+    "price": "jlfddsjlfjslfj",
+    "duration": "ljfdldsjflsjfl",
+    "overview": "ljfldjsfljslfjslkf",
+    "pickupDrop": "jlfjsdlfjlsfjlk",
+    "routeLine": "jljfdslfjsljl",
+    "banner": [
+      "/uploads/1776611504190-134055365227626200.jpg"
+    ],
+    "images": [],
+    "itinerary": [
+      {
+        "title": "1",
+        "description": "dfdlfjl"
+      },
+      {
+        "title": "2",
+        "description": "fddlsfjlsj"
+      }
+    ],
+    "similarTrips": []
+  },
+  {
+    "slug": "\"manali\"",
+    "category": "\"india\"",
+    "title": "\"namli\"",
+    "price": "\"999\"",
+    "duration": "\"1day 1night\"",
+    "overview": "\"dsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajfl\"",
+    "pickupDrop": "\"delhi to manali\"",
+    "routeLine": "\"delhi to manali\"",
+    "banner": [
+      "/uploads/1776612388404-134037218404328507.jpg"
+    ],
+    "images": [
+      "/uploads/1776612388414-134043933260048859.jpg"
+    ],
+    "itinerary": [
+      {
+        "title": "1",
+        "description": "check1"
+      },
+      {
+        "title": "2",
+        "description": "check2"
+      }
+    ],
+    "inclusions": [
+      "lsdjflsjflkjsfl"
+    ],
+    "exclusions": [],
+    "otherInfo": [],
+    "createdAt": "2026-04-19T15:26:28.419Z"
+  },
+  {
+    "slug": "manali",
+    "category": "india",
+    "title": "namli",
+    "price": "999",
+    "duration": "1day 1night",
+    "overview": "dsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajfl",
+    "pickupDrop": "delhi to manali",
+    "routeLine": "delhi to manali",
+    "banner": [
+      "/uploads/1776612604236-134037218404328507.jpg"
+    ],
+    "images": [
+      "/uploads/1776612604243-134043933260048859.jpg"
+    ],
+    "itinerary": [
+      {
+        "title": "1",
+        "description": "check1"
+      },
+      {
+        "title": "2",
+        "description": "check2"
+      }
+    ],
+    "inclusions": [
+      "lsdjflsjflkjsfl"
+    ],
+    "exclusions": [],
+    "otherInfo": [],
+    "createdAt": "2026-04-19T15:30:04.246Z"
+  },
+  {
+    "slug": "manali",
+    "category": "india",
+    "title": "namli",
+    "price": "999",
+    "duration": "1day 1night",
+    "overview": "dsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajfl",
+    "pickupDrop": "delhi to manali",
+    "routeLine": "delhi to manali",
+    "banner": [
+      "/uploads/1776612715770-134037218404328507.jpg"
+    ],
+    "images": [
+      "/uploads/1776612715774-134043933260048859.jpg"
+    ],
+    "itinerary": [
+      {
+        "title": "1",
+        "description": "check1"
+      },
+      {
+        "title": "2",
+        "description": "check2"
+      }
+    ],
+    "inclusions": [
+      "lsdjflsjflkjsfl"
+    ],
+    "exclusions": [],
+    "otherInfo": [],
+    "createdAt": "2026-04-19T15:31:55.780Z"
+  },
+  {
+    "slug": "manali1",
+    "category": "india",
+    "title": "namli",
+    "price": "999",
+    "duration": "1day 1night",
+    "overview": "dsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajfl",
+    "pickupDrop": "delhi to manali",
+    "routeLine": "delhi to manali",
+    "banner": [
+      "/uploads/1776612735876-134037218404328507.jpg"
+    ],
+    "images": [
+      "/uploads/1776612735884-134043933260048859.jpg"
+    ],
+    "itinerary": [
+      {
+        "title": "1",
+        "description": "check1"
+      },
+      {
+        "title": "2",
+        "description": "check2"
+      }
+    ],
+    "inclusions": [
+      "lsdjflsjflkjsfl"
+    ],
+    "exclusions": [],
+    "otherInfo": [],
+    "createdAt": "2026-04-19T15:32:15.887Z"
+  }
+]

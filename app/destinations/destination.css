@@ -1,0 +1,136 @@
+/* HERO CONTAINER */
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* IMAGE */
+.hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  will-change: transform, filter;
+  transform: scale(1.1); /* 👈 smoother initial feel */
+}
+
+/* TEXT MASK */
+.hero-text {
+  position: relative;
+  z-index: 10;
+
+  font-size: clamp(80px, 15vw, 220px); /* 👈 responsive */
+  font-weight: 900;
+  letter-spacing: -3px;
+  text-transform: uppercase;
+
+  color: transparent;
+  background-size: cover;
+  background-position: center;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  will-change: transform, opacity;
+
+  text-align: center;
+  line-height: 1;
+}
+
+/* OVERLAY (PREMIUM GRADIENT) */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.85)
+  );
+
+  backdrop-filter: blur(6px); /* 👈 slightly stronger blur */
+  z-index: 5;
+}
+
+/* OPTIONAL: FINAL TEXT (if using later) */
+.hero-final-text {
+  position: absolute;
+  bottom: 10%;
+  left: 8%;
+  color: white;
+  z-index: 20;
+  max-width: 500px;
+
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.hero-final-text h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero-final-text p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 768px) {
+  .hero-text {
+    font-size: 18vw;
+    letter-spacing: -1px;
+  }
+
+  .hero-final-text {
+    left: 5%;
+    right: 5%;
+    bottom: 8%;
+  }
+
+  .hero-final-text h2 {
+    font-size: 2rem;
+  }
+}
+.gallery-container {
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery-slider {
+  display: flex;
+  height: 100%; /* ensures panels stretch full height */
+}
+
+.gallery-panel {
+  flex: 0 0 100vw; /* each panel full width */
+  height: 100%;    /* full height */
+  position: relative;
+}
+
+.gallery-img-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fill panel, maintain aspect ratio */
+  display: block;
+}

@@ -1,0 +1,186 @@
+/* GLOBAL FIX */
+
+
+/* HERO SECTION */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100svh; /* 🔥 mobile safe viewport */
+  min-height: 600px;
+  overflow: hidden;
+}
+
+/* BACKGROUND (NO BLUR / NO STRETCH) */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* 🔥 smooth rendering */
+  transform: scale(1.02);
+  will-change: transform;
+  transition: background-image 0.5s ease;
+}
+
+/* OVERLAY */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* TEXT */
+.left {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  color: white;
+  max-width: 500px;
+}
+
+.left h1 {
+  font-size: clamp(2rem, 6vw, 4rem);
+  line-height: 1.1;
+}
+
+.left p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.cta {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #ff7a00;
+  border-radius: 8px;
+  color: white;
+  border: none;
+}
+
+/* DESKTOP CARDS */
+.cards {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  width: 180px;
+  height: 260px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+}
+
+.card-text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  font-size: 14px;
+}
+
+/* 📱 MOBILE PERFECT FIX */
+@media (max-width: 768px) {
+
+  .hero {
+    height: 85vh; /* 🔥 main fix (no stretch) */
+  }
+
+  .left {
+    top: 32%;
+    left: 20px;
+    max-width: 85%;
+  }
+
+  .left h1 {
+    font-size: 28px;
+  }
+
+  .left p {
+    font-size: 14px;
+  }
+
+  /* 🔥 CARDS FIX */
+  .cards {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    top: auto;
+    transform: none;
+
+    display: flex;
+    overflow-x: auto;
+    padding: 0 15px;
+    gap: 12px;
+
+    scroll-snap-type: x mandatory;
+  }
+
+  .card {
+    min-width: 140px;
+    height: 180px;
+    scroll-snap-align: start;
+  }
+}
+
+.hero-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.hero-buttons .btn {
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Book Now style */
+.hero-buttons .book-now {
+  background-color: #ff5a5f;
+  color: #fff;
+}
+
+.hero-buttons .book-now:hover {
+  background-color: #e04848;
+}
+
+/* WhatsApp style */
+.hero-buttons .whatsapp {
+  background-color: #25d366;
+  color: #fff;
+}
+
+.hero-buttons .whatsapp:hover {
+  background-color: #1da851;
+}

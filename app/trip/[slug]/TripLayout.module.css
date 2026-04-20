@@ -1,0 +1,54 @@
+.wrapper {
+  display: flex;
+  gap: 40px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.left {
+  flex: 1;
+}
+
+.right {
+  width: 340px;
+  position: relative;
+}
+
+/* DEFAULT */
+.sidebar {
+  position: relative;
+}
+
+/* 🔥 FIXED AFTER HERO */
+.fixed {
+  position: fixed;
+  top: 20px;
+  width: 340px;
+}
+
+/* 🔥 STOP BEFORE FOOTER */
+.stop {
+  position: absolute;
+  bottom: 0;
+  top: auto;
+}
+
+/* EXISTING CODE SAME RAKHO */
+
+/* 📱 MOBILE FIX */
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    padding: 20px 15px;
+  }
+
+  .right {
+    display: none; /* ❌ Sidebar hide */
+  }
+
+  .left {
+    width: 100%;
+  }
+}

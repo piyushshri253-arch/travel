@@ -1,0 +1,40 @@
+export const tourPackagesData = {
+  bali: [
+    {
+      title: "7 Days Adventure Bali Trip Package",
+      days: "6N/7D",
+      location: "Denpasar Airport - Denpasar",
+      date: "Any date of your choice",
+      price: "₹42,999/- onwards",
+      type: "Customised",
+      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      title: "Budget Bali Tour Package 5 Days 4 Nights",
+      days: "4N/5D",
+      location: "Denpasar Airport - Denpasar",
+      date: "Any date of your choice",
+      price: "₹29,999/- onwards",
+      type: "Customised",
+      image: "https://images.unsplash.com/photo-1549887534-0dcaeb824ab2?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      title: "Tropical Getaway - 5 Days Bali Trip Package",
+      days: "4N/5D",
+      location: "Denpasar Airport - Denpasar",
+      date: "Any date of your choice",
+      price: "₹34,999/- onwards",
+      type: "Customised",
+      image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      title: "Perfect 6 Days Bali Trip with Uluwatu Kecak Dance",
+      days: "5N/6D",
+      location: "Denpasar Airport - Denpasar",
+      date: "Any date of your choice",
+      price: "₹39,999/- onwards",
+      type: "Customised",
+      image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    },
+  ],
+};

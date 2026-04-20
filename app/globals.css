@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+
+@import "tailwindcss";
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-marquee {
+
+
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 12s linear infinite;
+}
+
+/* hide scrollbar */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* 🔥 main fix */
+}
+
+
+
+/* 🔥 COMPLETE SCROLLBAR REMOVE */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE & Edge */
+  scrollbar-width: none;     /* Firefox */
+}

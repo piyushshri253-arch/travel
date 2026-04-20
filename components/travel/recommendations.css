@@ -1,0 +1,84 @@
+/* Section */
+.rec {
+  background: #000;
+  padding: 100px 40px;
+  color: white;
+  text-align: center;
+}
+
+/* Title */
+.rec-title {
+  font-size: 28px;
+  margin-bottom: 40px;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+/* Grid */
+.rec-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Card */
+.rec-card {
+  position: relative;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.rec-card img {
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+/* Hover zoom */
+.rec-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Overlay */
+.rec-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8),
+    transparent
+  );
+}
+
+/* Text */
+.rec-text {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  text-align: left;
+}
+
+.rec-text h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.rec-text p {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .rec-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .rec-grid {
+    grid-template-columns: 1fr;
+  }
+}

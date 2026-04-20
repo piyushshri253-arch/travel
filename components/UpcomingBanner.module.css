@@ -1,0 +1,27 @@
+.banner {
+  width: min(1200px, 90%);
+  margin: 30px auto;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 🔥 Hover effect (desktop) */
+.banner:hover {
+  transform: scale(1.02);
+}
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+  .banner {
+    width: 95%;
+    margin: 15px auto;
+  }
+}

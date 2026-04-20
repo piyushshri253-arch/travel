@@ -1,0 +1,231 @@
+.container {
+  width: min(1200px, 90%);
+  margin: 40px auto;
+}
+
+/* 🔥 HERO */
+.hero {
+  position: relative;
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.hero video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardOverlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 14px;
+
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.8),
+    rgba(0,0,0,0.2),
+    transparent
+  );
+}
+
+/* ✅ H3 (Title) */
+.cardOverlay h3 {
+  color: rgb(251, 251, 251);
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+
+  margin: 0;
+}
+
+/* ✅ Paragraph (Price) */
+.cardOverlay p {
+  color: rgb(222, 222, 222);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 21px;
+
+  margin-top: 6px;
+}
+
+.cardOverlay h3 {
+  text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+}
+
+.cardOverlay p {
+  text-shadow: 0 1px 6px rgba(0,0,0,0.5);
+}
+
+/* 🔥 HERO OVERLAY TEXT */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 40px;
+  color: #fff;
+}
+
+/* ✅ MAIN HEADING (India Trips) */
+.overlay h1 {
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: 800;   /* 👈 extra bold */
+  line-height: 110%;
+  letter-spacing: 0.5px;
+
+  margin: 0;
+
+  /* 🔥 premium shadow */
+  text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+/* ✅ SUBTEXT */
+.overlay p {
+  color: rgb(222, 222, 222);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+
+  margin-top: 10px;
+
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* ✅ BUTTON */
+.overlay button {
+  margin-top: 15px;
+  background: #ffd600;
+  color: #000;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .overlay {
+    padding: 20px;
+  }
+
+  .overlay h1 {
+    font-size: 26px;   /* 👈 mobile ke liye chhota */
+  }
+
+  .overlay p {
+    font-size: 13px;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 40px;
+  color: #fff;
+}
+
+.overlay h1 {
+  font-size: 40px;
+}
+
+.overlay p {
+  margin: 10px 0;
+}
+
+.overlay button {
+  background: #ffd600;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* 🔥 SLIDER */
+.sliderWrapper {
+  position: relative;
+  margin-top: -60px;
+}
+
+.slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  min-width: 220px;
+  height: 260px;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardOverlay {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  padding: 15px;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+
+/* 🔘 arrows */
+.left,
+.right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #00bcd4;
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 8px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.left { left: 0; }
+.right { right: 0; }
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+  .hero {
+    height: 200px;
+  }
+
+  .overlay h1 {
+    font-size: 22px;
+  }
+
+  .sliderWrapper {
+    margin-top: -40px;
+  }
+
+  .card {
+    min-width: 160px;
+    height: 200px;
+  }
+
+  .left,
+  .right {
+    display: none; /* mobile clean */
+  }
+}
