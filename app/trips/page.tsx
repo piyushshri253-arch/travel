@@ -2,29 +2,26 @@
 
 import { useRouter } from "next/navigation";
 
-export default function TripDetails({ params }: any) {
+export default function TripDetails({ params }) {
   const router = useRouter();
   const { slug } = params;
 
-  const tripsData: any = {
+  const tripsData = {
     "spiti-holi": {
       title: "Spiti Valley Holi Trip",
-      image:
-        "https://images.unsplash.com/photo-1626621341517-bbf3d9990c6e",
+      image: "https://images.unsplash.com/photo-1626621341517-bbf3d9990c6e",
       description: "Celebrate Holi in the magical Spiti Valley.",
       price: 19999,
     },
     "spiti-budget": {
       title: "Spiti Budget Trip",
-      image:
-        "https://images.unsplash.com/photo-1605538883669-82573b3c2c36",
+      image: "https://images.unsplash.com/photo-1605538883669-82573b3c2c36",
       description: "Affordable Spiti adventure.",
       price: 14999,
     },
     "sri-lanka": {
       title: "Sri Lanka Explorer",
-      image:
-        "https://images.unsplash.com/photo-1505739778507-7e8e5a0c1b8a",
+      image: "https://images.unsplash.com/photo-1505739778507-7e8e5a0c1b8a",
       description: "Discover beaches & culture.",
       price: 45999,
     },
@@ -36,12 +33,10 @@ export default function TripDetails({ params }: any) {
     return <div className="p-10 text-red-500">Trip not found</div>;
   }
 
-  // 🎯 Coin calculation logic
-  const calculateCoins = (price: number) => {
-    return Math.floor(price / 10); // ₹10 = 1 coin
+  const calculateCoins = (price) => {
+    return Math.floor(price / 10);
   };
 
-  // 🔥 BOOKING FUNCTION
   const handleBooking = async () => {
     const storedUser = localStorage.getItem("user");
     const token = localStorage.getItem("token");
@@ -56,7 +51,7 @@ export default function TripDetails({ params }: any) {
     const coins = calculateCoins(trip.price);
 
     try {
-      const res = await fetch("http://localhost:3001/api/book-trip", {
+      const res = await fetch("/api/book-trip", { // 🔥 FIXED (no localhost)
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -78,11 +73,10 @@ export default function TripDetails({ params }: any) {
       }
 
       alert(`🎉 Trip Booked Successfully!\nYou earned ${coins} coins 🪙`);
-
       router.push("/bookings");
 
     } catch (error) {
-      alert("Server error. Check backend.");
+      alert("Server error.");
     }
   };
 
