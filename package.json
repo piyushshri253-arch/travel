@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "prisma": "prisma studio"
-  },
+  "dev": "next dev",
+  "build": "prisma generate && next build",
+  "start": "next start",
+  "prisma": "prisma studio"
+},
   "dependencies": {
     "@mantine/core": "^5.10.5",
     "@mantine/hooks": "^5.10.5",

@@ -235,6 +235,40 @@ export default function Admin() {
               ))}
             </div>
 
+            {/* EXCLUSIONS */}
+<div className="card">
+  <h2 className="title">❌ Exclusions</h2>
+  <button className="btn" onClick={() => addField("exclusions")}>+ Add</button>
+
+  {form.exclusions.map((item, i) => (
+    <div key={i} className="flex gap-2 mt-2">
+      <input
+        className="input"
+        value={item}
+        onChange={(e) => updateField("exclusions", i, e.target.value)}
+      />
+      <button onClick={() => removeField("exclusions", i)}>✕</button>
+    </div>
+  ))}
+</div>
+
+{/* OTHER INFO */}
+<div className="card">
+  <h2 className="title">ℹ Other Info</h2>
+  <button className="btn" onClick={() => addField("otherInfo")}>+ Add</button>
+
+  {form.otherInfo.map((item, i) => (
+    <div key={i} className="flex gap-2 mt-2">
+      <input
+        className="input"
+        value={item}
+        onChange={(e) => updateField("otherInfo", i, e.target.value)}
+      />
+      <button onClick={() => removeField("otherInfo", i)}>✕</button>
+    </div>
+  ))}
+</div>
+
           </div>
         </div>
 
