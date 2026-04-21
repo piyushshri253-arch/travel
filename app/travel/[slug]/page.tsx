@@ -16,7 +16,7 @@ export default function DestinationPage() {
 
 return (
   <div style={{ background: "#000", color: "#fff" }}>
-    <Hero slug={slug} />
+    <Hero  />
     <About />
     <ItineraryPage />
     <Recommendations />
