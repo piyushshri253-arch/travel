@@ -1,18 +1,17 @@
 "use client";
 
 import { useEffect } from "react";
-import Lenis from "@studio-freight/lenis";
+import Lenis from "lenis"; // ✅ new package
 import gsap from "gsap";
 
 export default function SmoothScroll() {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.2, // smoothness (1.2–1.5 best)
+      duration: 1.2,
       smoothWheel: true,
-      smoothTouch: false,
+      // ❌ smoothTouch remove
     });
 
-    // RAF loop
     function raf(time: number) {
       lenis.raf(time);
       requestAnimationFrame(raf);
@@ -20,12 +19,11 @@ export default function SmoothScroll() {
 
     requestAnimationFrame(raf);
 
-    // 🔥 GSAP sync (VERY IMPORTANT)
+    // GSAP sync
     lenis.on("scroll", () => {
       gsap.ticker.tick();
     });
 
-    // cleanup (best practice)
     return () => {
       lenis.destroy();
     };
