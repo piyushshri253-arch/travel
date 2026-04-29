@@ -56,17 +56,17 @@ model Review {
   date        DateTime @default(now())
 
   userId String?
-  user   User?   @relation(fields: [userId], references: [id], onDelete: SetNull)
+  user   User? @relation(fields: [userId], references: [id], onDelete: SetNull)
 }
 
 ///////////////////////
-// TRIP (CMS CORE - FINAL FIXED)
+// TRIP
 ///////////////////////
 model Trip {
   id String @id @default(uuid())
 
   slug     String @unique
-  category String   // 🔥 IMPORTANT (india / international / honeymoon)
+  category String
 
   title    String
   duration String
@@ -77,8 +77,12 @@ model Trip {
 
   overview String
 
-  banner String[]   // 🔥 hero images
-  images String[]    // gallery images
+  banner String[]
+  images String[]
+
+  inclusions String[]   // ✅ added
+  exclusions String[]   // ✅ added
+  otherInfo  String[]   // ✅ added
 
   itinerary    Itinerary[]
   similarTrips SimilarTrip[]
@@ -98,7 +102,7 @@ model Itinerary {
   description String
 
   tripId String
-  trip   Trip   @relation(fields: [tripId], references: [id], onDelete: Cascade)
+  trip   Trip @relation(fields: [tripId], references: [id], onDelete: Cascade)
 }
 
 ///////////////////////
@@ -117,5 +121,5 @@ model SimilarTrip {
   slug     String
 
   tripId String
-  trip   Trip   @relation(fields: [tripId], references: [id], onDelete: Cascade)
+  trip   Trip @relation(fields: [tripId], references: [id], onDelete: Cascade)
 }
