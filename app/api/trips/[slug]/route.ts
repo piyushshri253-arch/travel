@@ -1,33 +1,39 @@
 import { NextResponse } from "next/server";
-import fs from "fs-extra";
-import path from "path";
+import { prisma } from "@/lib/prisma";
 
-const dataFile = path.join(process.cwd(), "data/trips.json");
-
-export async function GET(req: Request, { params }: any) {
+export async function GET(
+  req: Request,
+  { params }: { params: { slug: string } }
+) {
   try {
-    // ✅ FIX HERE
-    const { slug } = await params;
+    const { slug } = params;
 
     console.log("🔥 SLUG:", slug);
 
-    if (!(await fs.pathExists(dataFile))) {
+    const trip = await prisma.trip.findUnique({
+      where: {
+        slug,
+      },
+      include: {
+        itinerary: true,
+        similarTrips: true,
+      },
+    });
+
+    if (!trip) {
       return NextResponse.json(null, { status: 200 });
     }
 
-    const trips = await fs.readJson(dataFile);
-
-    console.log("ALL TRIPS:", trips);
-
-    const trip = trips.find(
-      (t: any) => String(t.slug) === String(slug)
-    );
-
-    return NextResponse.json(trip || null, { status: 200 });
+    return NextResponse.json(trip, { status: 200 });
 
   } catch (err: any) {
+    console.error("❌ GET TRIP ERROR:", err);
+
     return NextResponse.json(
-      { error: err.message },
+      {
+        success: false,
+        error: err.message,
+      },
       { status: 500 }
     );
   }

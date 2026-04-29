@@ -6,11 +6,14 @@ import Gallery from "@/components/trip/Gallery";
 import Similar from "@/components/trip/similar";
 
 export default async function Page({ params }: any) {
-  const { slug } = await params; // ✅ FIX
+  const { slug } = await params;
 
   console.log("SLUG:", slug);
 
-  const res = await fetch(`http://localhost:3000/api/trips/${slug}`, {
+  const baseUrl =
+    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
+  const res = await fetch(`${baseUrl}/api/trips/${slug}`, {
     cache: "no-store",
   });
 
