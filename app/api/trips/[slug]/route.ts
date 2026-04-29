@@ -1,12 +1,13 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 
-export async function GET(
-  req: Request,
-  { params }: { params: { slug: string } }
-) {
+type Context = {
+  params: Promise<{ slug: string }>;
+};
+
+export async function GET(req: Request, context: Context) {
   try {
-    const { slug } = params;
+    const { slug } = await context.params;
 
     console.log("🔥 SLUG:", slug);
 
@@ -25,7 +26,6 @@ export async function GET(
     }
 
     return NextResponse.json(trip, { status: 200 });
-
   } catch (err: any) {
     console.error("❌ GET TRIP ERROR:", err);
 
