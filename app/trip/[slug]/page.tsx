@@ -6,8 +6,14 @@ import Gallery from "@/components/trip/Gallery";
 import Similar from "@/components/trip/similar";
 import { prisma } from "@/lib/prisma";
 
-export default async function Page({ params }: any) {
-  const { slug } = await params;
+type PageProps = {
+  params: {
+    slug: string;
+  };
+};
+
+export default async function Page({ params }: PageProps) {
+  const { slug } = params;
 
   const trip = await prisma.trip.findUnique({
     where: { slug },
@@ -17,6 +23,7 @@ export default async function Page({ params }: any) {
     },
   });
 
+  // 🔥 safe check
   if (!trip) {
     return <h2>Trip Not Found</h2>;
   }
@@ -30,8 +37,9 @@ export default async function Page({ params }: any) {
         right={<StickyForm data={trip} />}
       />
 
-      <Gallery images={trip.images || []} />
-      <Similar />
+      <Gallery images={trip.images ?? []} />
+
+      <Similar data={trip.similarTrips ?? []} />
     </>
   );
 }
