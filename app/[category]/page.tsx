@@ -5,7 +5,11 @@ export default async function Page({
 }) {
   const { category, slug } = await params;
 
-  const res = await fetch("http://localhost:3000/api/trips", {
+  const baseUrl =
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    "https://travel-steel-sigma.vercel.app";
+
+  const res = await fetch(`${baseUrl}/api/trips`, {
     cache: "no-store",
   });
 
