@@ -284,7 +284,7 @@ Depart with unforgettable memories, photos, and festival experiences.`
     ],
 
     otherInfo:
-"Please carry a valid government-issued ID and ensure your passport is up to date. It is recommended to keep at least 2 passport-size photographs with you. Pack comfortable warm clothing including jackets, thermals, socks, and caps. Don’t forget essentials like sunscreen (SPF 40+), lip balm, and UV-protected sunglasses. Carry personal medications and basic toiletries. A rucksack along with a small daypack and a reusable water bottle is advisable. Also keep basic first-aid items such as bandages, antiseptic, and medicines for headache, motion sickness, and digestion. Personal care items like cold cream and deodorant are recommended for added comfort during the trip."
+`Please carry a valid government-issued ID and ensure your passport is up to date. It is recommended to keep at least 2 passport-size photographs with you. Pack comfortable warm clothing including jackets, thermals, socks, and caps. Don’t forget essentials like sunscreen (SPF 40+), lip balm, and UV-protected sunglasses. Carry personal medications and basic toiletries. A rucksack along with a small daypack and a reusable water bottle is advisable. Also keep basic first-aid items such as bandages, antiseptic, and medicines for headache, motion sickness, and digestion. Personal care items like cold cream and deodorant are recommended for added comfort during the trip.`, 
  },
 
 
@@ -544,7 +544,7 @@ Trip concludes with beautiful experiences to cherish for a lifetime.`
     ],
 
     otherInfo:
-    "Please carry a valid government-issued ID and ensure your passport is up to date. It is recommended to keep at least 2 passport-size photographs with you. Pack comfortable clothing suitable for travel, including light layers and essentials like socks and caps if required. Don’t forget sun protection items such as sunscreen (SPF 40+), lip balm, and UV-protected sunglasses. Carry personal medications along with basic toiletries for your convenience. A rucksack along with a small daypack and a reusable water bottle is advisable for daily use. Additionally, keep basic first-aid essentials such as bandages, antiseptic, and medicines for headache, motion sickness, and digestion. Personal care items like cold cream and deodorant are also recommended for a comfortable travel experience."
+    `Please carry a valid government-issued ID and ensure your passport is up to date. It is recommended to keep at least 2 passport-size photographs with you. Pack comfortable clothing suitable for travel, including light layers and essentials like socks and caps if required. Don’t forget sun protection items such as sunscreen (SPF 40+), lip balm, and UV-protected sunglasses. Carry personal medications along with basic toiletries for your convenience. A rucksack along with a small daypack and a reusable water bottle is advisable for daily use. Additionally, keep basic first-aid essentials such as bandages, antiseptic, and medicines for headache, motion sickness, and digestion. Personal care items like cold cream and deodorant are also recommended for a comfortable travel experience.`,
  },
 
 
@@ -899,8 +899,7 @@ Rain jacket / poncho
 Hiking shoes + sandals/flip-flops
 Toiletries (toothbrush, sanitizer, sunscreen SPF 40+)
 Basic medicines (headache, motion sickness, fever, etc.)
-Torch / flashlight` 
-
+Torch / flashlight`, 
  },
 
 
@@ -1260,7 +1259,7 @@ Travel Essentials
 - Toiletries (toothbrush, sanitizer, sunscreen SPF 40+)
 - Basic medicines (headache, motion sickness, fever, etc.)
 - Torch / flashlight
-` 
+`, 
  },
 
 
@@ -1671,7 +1670,7 @@ Personal Accessories
 - Cold cream or moisturizer
 - Body spray/deodorant
 - LED torch / flashlight
-` 
+`, 
  },
 
 
@@ -2074,7 +2073,7 @@ Personal Accessories
 - Cold cream or moisturizer
 - Body spray/deodorant
 - LED torch / flashlight
-` 
+`, 
  },
 
 
@@ -2455,7 +2454,7 @@ Personal Accessories
 - Cold cream or moisturizer
 - Body spray/deodorant
 - LED torch / flashlight
-` 
+`, 
  },
 
  "paris-to-vienna-tour": {
@@ -2836,7 +2835,7 @@ Personal Accessories
 - Lip balm and cold cream/moisturizer
 - Body spray/deodorant
 - LED torch / flashlight
-` 
+`, 
  },
 
 
@@ -3197,8 +3196,7 @@ Transfer to the airport for your return journey with unforgettable memories of E
     ],
 
     otherInfo:
-  
-"Other Info (Must Carry): Authentic government ID card, comfortable warm clothing (woolen socks, cap, fleece jackets/warmers, down jacket), toiletries, sunscreen & lip balm, UV-protected sunglasses, personal medicines (if any), rucksack bag with day pack, 3-litre water bottle or bladder, sun cap & woolen cap, cotton long-sleeve & short-sleeve t-shirts, and a fleece jacket."
+`Other Info (Must Carry): Authentic government ID card, comfortable warm clothing (woolen socks, cap, fleece jackets/warmers, down jacket), toiletries, sunscreen & lip balm, UV-protected sunglasses, personal medicines (if any), rucksack bag with day pack, 3-litre water bottle or bladder, sun cap & woolen cap, cotton long-sleeve & short-sleeve t-shirts, and a fleece jacket.`, 
  },
 };
 
