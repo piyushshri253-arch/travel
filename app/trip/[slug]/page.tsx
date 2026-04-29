@@ -10,8 +10,11 @@ export default async function Page({ params }: any) {
 
   console.log("SLUG:", slug);
 
-  const baseUrl =
-    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
+
+  if (!baseUrl) {
+    throw new Error("NEXT_PUBLIC_SITE_URL missing in Vercel");
+  }
 
   const res = await fetch(`${baseUrl}/api/trips/${slug}`, {
     cache: "no-store",
