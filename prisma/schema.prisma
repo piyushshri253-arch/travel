@@ -7,44 +7,37 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-///////////////////////
-// USER
-///////////////////////
+/// ////////////////////
+/// ////////////////////
 model User {
-  id       String @id @default(uuid())
-  name     String
-  email    String @unique
-  password String
-  points   Int    @default(0)
-
-  bookings Booking[]
-  reviews  Review[]
-
-  createdAt DateTime @default(now())
+  id        String    @id @default(uuid())
+  name      String
+  email     String    @unique
+  password  String
+  points    Int       @default(0)
+  createdAt DateTime  @default(now())
+  bookings  Booking[]
+  reviews   Review[]
 
   @@index([email])
 }
 
-///////////////////////
-// BOOKING
-///////////////////////
+/// ////////////////////
+/// ////////////////////
 model Booking {
-  id           String @id @default(uuid())
+  id           String   @id @default(uuid())
   destination  String
   price        Int
   pointsEarned Int
-
-  userId String
-  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
-
-  createdAt DateTime @default(now())
+  userId       String
+  createdAt    DateTime @default(now())
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId])
 }
 
-///////////////////////
-// REVIEW
-///////////////////////
+/// ////////////////////
+/// ////////////////////
 model Review {
   id          String   @id @default(uuid())
   name        String
@@ -54,63 +47,49 @@ model Review {
   destination String?
   avatar      String?
   date        DateTime @default(now())
-
-  userId String?
-  user   User? @relation(fields: [userId], references: [id], onDelete: SetNull)
+  userId      String?
+  user        User?    @relation(fields: [userId], references: [id])
 }
 
-///////////////////////
-// TRIP
-///////////////////////
+/// ////////////////////
+/// ////////////////////
 model Trip {
-  id String @id @default(uuid())
-
-  slug     String @unique
-  category String
-
-  title    String
-  duration String
-  price    String
-
-  pickupDrop String?
-  routeLine  String?
-
-  overview String
-
-  banner String[]
-  images String[]
-
-  inclusions String[]   // ✅ added
-  exclusions String[]   // ✅ added
-  otherInfo  String[]   // ✅ added
-
+  id           String        @id @default(uuid())
+  slug         String        @unique
+  category     String
+  title        String
+  duration     String
+  price        String
+  pickupDrop   String?
+  routeLine    String?
+  overview     String
+  banner       String[]
+  images       String[]
+  createdAt    DateTime      @default(now())
+  exclusions   String[]
+  inclusions   String[]
+  otherInfo    String[]
   itinerary    Itinerary[]
   similarTrips SimilarTrip[]
-
-  createdAt DateTime @default(now())
 
   @@index([category])
   @@index([slug])
 }
 
-///////////////////////
-// ITINERARY
-///////////////////////
+/// ////////////////////
+/// ////////////////////
 model Itinerary {
   id          String @id @default(uuid())
   title       String
   description String
-
-  tripId String
-  trip   Trip @relation(fields: [tripId], references: [id], onDelete: Cascade)
+  tripId      String
+  trip        Trip   @relation(fields: [tripId], references: [id], onDelete: Cascade)
 }
 
-///////////////////////
-// SIMILAR TRIPS
-///////////////////////
+/// ////////////////////
+/// ////////////////////
 model SimilarTrip {
-  id String @id @default(uuid())
-
+  id       String @id @default(uuid())
   title    String
   price    String
   duration String
@@ -119,7 +98,6 @@ model SimilarTrip {
   batch    String
   image    String
   slug     String
-
-  tripId String
-  trip   Trip @relation(fields: [tripId], references: [id], onDelete: Cascade)
+  tripId   String
+  trip     Trip   @relation(fields: [tripId], references: [id], onDelete: Cascade)
 }
