@@ -10,7 +10,8 @@
     "banner": "",
     "images": [],
     "itinerary": [],
-    "similarTrips": []
+    "similarTrips": [],
+    "otherInfo": ""
   },
   {
     "slug": "bali",
@@ -23,33 +24,22 @@
     "banner": "",
     "images": [],
     "itinerary": [],
-    "similarTrips": []
+    "similarTrips": [],
+    "otherInfo": ""
   },
   {
     "slug": "goa",
     "title": "goa",
     "price": "999",
     "duration": "10d 11n",
-    "overview": "flWhat is Lorem Ipsum?\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\n\r\nWhy do we use it?\r\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+    "overview": "Lorem Ipsum long text...",
     "pickupDrop": "delhi to goa",
     "routeLine": "jfdskdfj",
     "banner": "",
     "images": [],
     "itinerary": [],
-    "similarTrips": []
-  },
-  {
-    "slug": "\"test\"",
-    "title": "\"test\"",
-    "price": "\"test\"",
-    "duration": "\"te5\"",
-    "overview": "\"dsljlsfjlsjf\"",
-    "pickupDrop": "\"\"",
-    "routeLine": "\"5es\"",
-    "banner": "",
-    "images": [],
-    "itinerary": [],
-    "similarTrips": []
+    "similarTrips": [],
+    "otherInfo": ""
   },
   {
     "slug": "test1",
@@ -62,7 +52,8 @@
     "banner": "",
     "images": [],
     "itinerary": [],
-    "similarTrips": []
+    "similarTrips": [],
+    "otherInfo": ""
   },
   {
     "slug": "test2",
@@ -73,15 +64,16 @@
     "pickupDrop": "jljsldfjl",
     "routeLine": "jlfdsjlfj",
     "banner": [
-      "/uploads/1776611417713-134037218404328507.jpg",
-      "/uploads/1776611417718-134089151646757051.jpg"
+      "/uploads/1776611417713.jpg",
+      "/uploads/1776611417718.jpg"
     ],
     "images": [
-      "/uploads/1776611417740-134089151646757051.jpg",
-      "/uploads/1776611417744-134055365227626200.jpg"
+      "/uploads/1776611417740.jpg",
+      "/uploads/1776611417744.jpg"
     ],
     "itinerary": [],
-    "similarTrips": []
+    "similarTrips": [],
+    "otherInfo": ""
   },
   {
     "slug": "test4",
@@ -92,52 +84,15 @@
     "pickupDrop": "jlfjsdlfjlsfjlk",
     "routeLine": "jljfdslfjsljl",
     "banner": [
-      "/uploads/1776611504190-134055365227626200.jpg"
+      "/uploads/1776611504190.jpg"
     ],
     "images": [],
     "itinerary": [
-      {
-        "title": "1",
-        "description": "dfdlfjl"
-      },
-      {
-        "title": "2",
-        "description": "fddlsfjlsj"
-      }
+      { "title": "1", "description": "dfdlfjl" },
+      { "title": "2", "description": "fddlsfjlsj" }
     ],
-    "similarTrips": []
-  },
-  {
-    "slug": "\"manali\"",
-    "category": "\"india\"",
-    "title": "\"namli\"",
-    "price": "\"999\"",
-    "duration": "\"1day 1night\"",
-    "overview": "\"dsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajfl\"",
-    "pickupDrop": "\"delhi to manali\"",
-    "routeLine": "\"delhi to manali\"",
-    "banner": [
-      "/uploads/1776612388404-134037218404328507.jpg"
-    ],
-    "images": [
-      "/uploads/1776612388414-134043933260048859.jpg"
-    ],
-    "itinerary": [
-      {
-        "title": "1",
-        "description": "check1"
-      },
-      {
-        "title": "2",
-        "description": "check2"
-      }
-    ],
-    "inclusions": [
-      "lsdjflsjflkjsfl"
-    ],
-    "exclusions": [],
-    "otherInfo": "",
-    "createdAt": "2026-04-19T15:26:28.419Z"
+    "similarTrips": [],
+    "otherInfo": ""
   },
   {
     "slug": "manali",
@@ -145,119 +100,45 @@
     "title": "namli",
     "price": "999",
     "duration": "1day 1night",
-    "overview": "dsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajfl",
+    "overview": "long text...",
     "pickupDrop": "delhi to manali",
     "routeLine": "delhi to manali",
     "banner": [
-      "/uploads/1776612604236-134037218404328507.jpg"
+      "/uploads/1776612604236.jpg"
     ],
     "images": [
-      "/uploads/1776612604243-134043933260048859.jpg"
+      "/uploads/1776612604243.jpg"
     ],
     "itinerary": [
-      {
-        "title": "1",
-        "description": "check1"
-      },
-      {
-        "title": "2",
-        "description": "check2"
-      }
+      { "title": "1", "description": "check1" },
+      { "title": "2", "description": "check2" }
     ],
-    "inclusions": [
-      "lsdjflsjflkjsfl"
-    ],
+    "inclusions": ["lsdjflsjflkjsfl"],
     "exclusions": [],
-    "otherInfo": "",
-    "createdAt": "2026-04-19T15:30:04.246Z"
-  },
-  {
-    "slug": "manali",
-    "category": "india",
-    "title": "namli",
-    "price": "999",
-    "duration": "1day 1night",
-    "overview": "dsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajfl",
-    "pickupDrop": "delhi to manali",
-    "routeLine": "delhi to manali",
-    "banner": [
-      "/uploads/1776612715770-134037218404328507.jpg"
-    ],
-    "images": [
-      "/uploads/1776612715774-134043933260048859.jpg"
-    ],
-    "itinerary": [
-      {
-        "title": "1",
-        "description": "check1"
-      },
-      {
-        "title": "2",
-        "description": "check2"
-      }
-    ],
-    "inclusions": [
-      "lsdjflsjflkjsfl"
-    ],
-    "exclusions": [],
-    "otherInfo": "",
-    "createdAt": "2026-04-19T15:31:55.780Z"
-  },
-  {
-    "slug": "manali1",
-    "category": "india",
-    "title": "namli",
-    "price": "999",
-    "duration": "1day 1night",
-    "overview": "dsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajflsjfljsfljaldfj;lajdflasjfdllskljflajf;lajfljaljs;lfjdlajfl",
-    "pickupDrop": "delhi to manali",
-    "routeLine": "delhi to manali",
-    "banner": [
-      "/uploads/1776612735876-134037218404328507.jpg"
-    ],
-    "images": [
-      "/uploads/1776612735884-134043933260048859.jpg"
-    ],
-    "itinerary": [
-      {
-        "title": "1",
-        "description": "check1"
-      },
-      {
-        "title": "2",
-        "description": "check2"
-      }
-    ],
-    "inclusions": [
-      "lsdjflsjflkjsfl"
-    ],
-    "exclusions": [],
-    "otherInfo": "",
-    "createdAt": "2026-04-19T15:32:15.887Z"
+    "otherInfo": ""
   },
   {
     "slug": "europe-group-trip-with-tomorrowland",
     "category": "trip",
-    "title": "Ultimate Europe Trip: Amsterdam Canals to Tomorrowland Beats",
-    "price": "₹2,99,999/-per person",
+    "title": "Ultimate Europe Trip",
+    "price": "₹2,99,999",
     "duration": "7N - 8D",
-    "overview": "If you’ve ever spent your nights watching Tomorrowland sets and imagined yourself in that crowd, this journey finally turns that feeling into reality.\\n\\nYour experience begins in Amsterdam, a city that effortlessly blends charm and energy. Think peaceful canal walks during the day and lively evenings that stretch into unforgettable nights. Not far from the city, you’ll step into the storybook setting of Zaanse Schans, where traditional windmills, wooden clog making, and authentic Dutch cheese bring the old-world culture to life.\\n\\nThe journey continues into Belgium, with time spent exploring two of its most iconic cities. In Brussels, you’ll experience a mix of historic architecture and vibrant city life, while Antwerp welcomes you with elegant squares, stunning guild houses, and a rich artistic atmosphere. A walk through the famous Grote Markt gives you a glimpse into centuries of heritage and culture.\\n\\nThen comes the highlight of it all.\\n\\nStep into Tomorrowland—where everything changes. Massive stages that feel like fantasy worlds, music that pulses through every corner, and an energy that’s impossible to ignore. The artists you’ve followed for years perform live as lights and fireworks transform every moment into something surreal. Here, strangers quickly become friends, and every beat feels shared.\\n\\nFor three unforgettable days, time moves differently. Sleep takes a backseat, and the music becomes your constant.\\n\\nAnd when it all comes to an end, you won’t just leave with photos—you’ll leave with stories, emotions, and memories that stay with you forever.",
-    "pickupDrop": "Amsterdam Zaanse Schans Tour Antwerp Tomorrowland",
-    "routeLine": "Amsterdam Zaanse Schans Tour Antwerp Tomorrowland",
+    "overview": "long description...",
+    "pickupDrop": "Amsterdam",
+    "routeLine": "Amsterdam → Antwerp → Tomorrowland",
     "banner": [
-      "/uploads/1776786984996-02_banner.webp",
-      "/uploads/1776786985007-1767005195655-old-town-square-prague.avif"
+      "/uploads/banner1.webp",
+      "/uploads/banner2.avif"
     ],
     "images": [],
     "itinerary": [
       {
-        "title": " Arrival In Amsterdam | Evening Heineken Experience",
-        "description": "\nUpon arrival at Amsterdam Airport, our representative will meet you and assist with your transfer to the hotel.\n\n\nCheck into your hotel and take some time to shake off the jet lag.\n\n\nEvening -We take you to one of the most iconic places in the city - the Heineken Brewery\n\n\nSpend your evening exploring the \"Venice of the North\" at your own pace.\n\n\nYou can walk through the Leidseplein area for some live music or grab a local Dutch beer at a canal-side café (at your own cost).\n\n\nRelax and gear up for the massive festival journey ahead.\n\n\nOvernight stay at the hotel in Amsterdam."
+        "title": "Arrival in Amsterdam",
+        "description": "Hotel check-in and evening Heineken experience..."
       }
     ],
     "inclusions": [],
     "exclusions": [],
-    "otherInfo": "",
-    "createdAt": "2026-04-21T15:56:25.014Z"
+    "otherInfo": ""
   }
 ]
