@@ -7,11 +7,11 @@
     "overview": "ljflsjflsjfl",
     "pickupDrop": "gg",
     "routeLine": "jdlfj",
-    "banner": "",
+    "banner": [],
     "images": [],
     "itinerary": [],
     "similarTrips": [],
-    "otherInfo": ""
+    "otherInfo": []
   },
   {
     "slug": "bali",
@@ -21,11 +21,11 @@
     "overview": "ldjslfjslfjlsjfa",
     "pickupDrop": "fjdsljdfl",
     "routeLine": "fjdslfjdl",
-    "banner": "",
+    "banner": [],
     "images": [],
     "itinerary": [],
     "similarTrips": [],
-    "otherInfo": ""
+    "otherInfo": []
   },
   {
     "slug": "goa",
@@ -35,11 +35,11 @@
     "overview": "Lorem Ipsum long text...",
     "pickupDrop": "delhi to goa",
     "routeLine": "jfdskdfj",
-    "banner": "",
+    "banner": [],
     "images": [],
     "itinerary": [],
     "similarTrips": [],
-    "otherInfo": ""
+    "otherInfo": []
   },
   {
     "slug": "test1",
@@ -49,11 +49,11 @@
     "overview": "jfdlsjdflsjfdl",
     "pickupDrop": "",
     "routeLine": "5es",
-    "banner": "",
+    "banner": [],
     "images": [],
     "itinerary": [],
     "similarTrips": [],
-    "otherInfo": ""
+    "otherInfo": []
   },
   {
     "slug": "test2",
@@ -73,7 +73,7 @@
     ],
     "itinerary": [],
     "similarTrips": [],
-    "otherInfo": ""
+    "otherInfo": []
   },
   {
     "slug": "test4",
@@ -88,11 +88,17 @@
     ],
     "images": [],
     "itinerary": [
-      { "title": "1", "description": "dfdlfjl" },
-      { "title": "2", "description": "fddlsfjlsj" }
+      {
+        "title": "1",
+        "description": "dfdlfjl"
+      },
+      {
+        "title": "2",
+        "description": "fddlsfjlsj"
+      }
     ],
     "similarTrips": [],
-    "otherInfo": ""
+    "otherInfo": []
   },
   {
     "slug": "manali",
@@ -110,12 +116,25 @@
       "/uploads/1776612604243.jpg"
     ],
     "itinerary": [
-      { "title": "1", "description": "check1" },
-      { "title": "2", "description": "check2" }
+      {
+        "title": "1",
+        "description": "check1"
+      },
+      {
+        "title": "2",
+        "description": "check2"
+      }
     ],
-    "inclusions": ["lsdjflsjflkjsfl"],
+    "inclusions": [
+      "lsdjflsjflkjsfl"
+    ],
     "exclusions": [],
-    "otherInfo": ""
+    "otherInfo": [
+      "Government ID proof",
+      "Warm clothing",
+      "Personal medicines",
+      "Water bottle"
+    ]
   },
   {
     "slug": "europe-group-trip-with-tomorrowland",
@@ -139,6 +158,12 @@
     ],
     "inclusions": [],
     "exclusions": [],
-    "otherInfo": ""
+    "otherInfo": [
+      "Valid Passport",
+      "Travel Insurance",
+      "Comfortable Walking Shoes",
+      "Power Adapter",
+      "Personal Medicines"
+    ]
   }
 ]
