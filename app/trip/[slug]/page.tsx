@@ -14,40 +14,40 @@ type PageProps = {
 };
 
 export default async function Page({ params }: PageProps) {
-  // ✅ Next.js dynamic param
-  const { slug } = await params;
+  try {
+    const { slug } = await params;
 
-  // ✅ slug check
-  if (!slug) {
-    return notFound();
+    console.log("SLUG =", slug);
+
+    if (!slug) return notFound();
+
+    const trip = await prisma.trip.findUnique({
+      where: { slug },
+      include: {
+        itinerary: true,
+        similarTrips: true,
+      },
+    });
+
+    console.log("TRIP =", trip);
+
+    if (!trip) return notFound();
+
+    return (
+      <>
+        <HeroSection data={trip} />
+
+        <TripLayout
+          left={<TabsSection data={trip} />}
+          right={<StickyForm data={trip} />}
+        />
+
+        <Gallery images={trip.images ?? []} />
+        <Similar data={trip.similarTrips ?? []} />
+      </>
+    );
+  } catch (error) {
+    console.error("PAGE ERROR =", error);
+    return <h1>Server Error</h1>;
   }
-
-  // ✅ DB fetch
-  const trip = await prisma.trip.findUnique({
-    where: { slug },
-    include: {
-      itinerary: true,
-      similarTrips: true,
-    },
-  });
-
-  // ✅ not found
-  if (!trip) {
-    return notFound();
-  }
-
-  return (
-    <>
-      <HeroSection data={trip} />
-
-      <TripLayout
-        left={<TabsSection data={trip} />}
-        right={<StickyForm data={trip} />}
-      />
-
-      <Gallery images={trip.images ?? []} />
-
-      <Similar data={trip.similarTrips ?? []} />
-    </>
-  );
 }
