@@ -5,16 +5,24 @@ import TripLayout from "@/app/trip/[slug]/TripLayout";
 import Gallery from "@/components/trip/Gallery";
 import Similar from "@/components/trip/similar";
 import { prisma } from "@/lib/prisma";
+import { notFound } from "next/navigation";
 
 type PageProps = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 export default async function Page({ params }: PageProps) {
-  const { slug } = params;
+  // ✅ Next.js dynamic param
+  const { slug } = await params;
 
+  // ✅ slug check
+  if (!slug) {
+    return notFound();
+  }
+
+  // ✅ DB fetch
   const trip = await prisma.trip.findUnique({
     where: { slug },
     include: {
@@ -23,9 +31,9 @@ export default async function Page({ params }: PageProps) {
     },
   });
 
-  // 🔥 safe check
+  // ✅ not found
   if (!trip) {
-    return <h2>Trip Not Found</h2>;
+    return notFound();
   }
 
   return (
