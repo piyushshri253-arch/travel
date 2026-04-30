@@ -4,6 +4,17 @@ import { prisma } from "@/lib/prisma";
 const clean = (val: FormDataEntryValue | null) =>
   typeof val === "string" ? val.replace(/^"|"$/g, "").trim() : "";
 
+const safeParse = (value: FormDataEntryValue | null) => {
+  if (!value) return [];
+
+  try {
+    const parsed = JSON.parse(String(value));
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+};
+
 export async function POST(req: Request) {
   try {
     const formData = await req.formData();
@@ -12,7 +23,7 @@ export async function POST(req: Request) {
       .toLowerCase()
       .replace(/\s+/g, "-");
 
-    const category = clean(formData.get("category")) || "uncategorized";
+    const category = clean(formData.get("category")) || "trip";
     const title = clean(formData.get("title"));
     const price = clean(formData.get("price"));
     const duration = clean(formData.get("duration"));
@@ -20,25 +31,14 @@ export async function POST(req: Request) {
     const pickupDrop = clean(formData.get("pickupDrop"));
     const routeLine = clean(formData.get("routeLine"));
 
-    // files abhi skip (temporary)
     const banner: string[] = [];
     const images: string[] = [];
 
-    const itinerary = JSON.parse(
-      (formData.get("itinerary") as string) || "[]"
-    );
-
-    const inclusions = JSON.parse(
-      (formData.get("inclusions") as string) || "[]"
-    );
-
-    const exclusions = JSON.parse(
-      (formData.get("exclusions") as string) || "[]"
-    );
-
-    const otherInfo = JSON.parse(
-      (formData.get("otherInfo") as string) || "[]"
-    );
+    const itinerary = safeParse(formData.get("itinerary"));
+    const inclusions = safeParse(formData.get("inclusions"));
+    const exclusions = safeParse(formData.get("exclusions"));
+    const otherInfo = safeParse(formData.get("otherInfo"));
+    const similarTrips = safeParse(formData.get("similarTrips"));
 
     const trip = await prisma.trip.create({
       data: {
@@ -59,23 +59,40 @@ export async function POST(req: Request) {
         otherInfo,
 
         itinerary: {
-          create: itinerary.map((day: any) => ({
-            title: day.title,
-            description: day.description,
+          create: itinerary.map((item: any) => ({
+            title: item.title || "",
+            description: item.description || "",
+          })),
+        },
+
+        similarTrips: {
+          create: similarTrips.map((item: any) => ({
+            title: item.title || "",
+            price: item.price || "",
+            duration: item.duration || "",
+            location: item.location || "",
+            date: item.date || "",
+            batch: item.batch || "",
+            image: item.image || "",
+            slug: item.slug || "",
           })),
         },
       },
       include: {
         itinerary: true,
+        similarTrips: true,
       },
     });
 
-    return NextResponse.json({
-      success: true,
-      trip,
-    });
+    return NextResponse.json(
+      {
+        success: true,
+        trip,
+      },
+      { status: 201 }
+    );
   } catch (err: any) {
-    console.error("❌ ERROR:", err);
+    console.error("❌ TRIP CREATE ERROR:", err);
 
     return NextResponse.json(
       {
