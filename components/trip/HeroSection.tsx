@@ -8,7 +8,7 @@ type TripData = {
   duration?: string;
   price?: string;
   images?: string[];
-  banner?: string[] | string; // ✅ FIX: support both array + string
+  banner?: string[] | string;
 };
 
 type Props = {
@@ -16,21 +16,25 @@ type Props = {
 };
 
 export default function HeroSection({ data }: Props) {
-
   // =========================
-  // 🧠 NORMALIZE IMAGES (IMPORTANT FIX)
+  // 🧠 NORMALIZE IMAGES
+  // Priority:
+  // 1) banner string
+  // 2) banner array
+  // 3) gallery images
+  // 4) default image
   // =========================
   const images = useMemo(() => {
-    if (Array.isArray(data?.images) && data.images.length > 0) {
-      return data.images;
+    if (typeof data?.banner === "string" && data.banner.trim()) {
+      return [data.banner];
     }
 
     if (Array.isArray(data?.banner) && data.banner.length > 0) {
-      return data.banner;
+      return data.banner.filter(Boolean);
     }
 
-    if (typeof data?.banner === "string" && data.banner) {
-      return [data.banner];
+    if (Array.isArray(data?.images) && data.images.length > 0) {
+      return data.images.filter(Boolean);
     }
 
     return ["/default.jpg"];
@@ -38,32 +42,35 @@ export default function HeroSection({ data }: Props) {
 
   const [index, setIndex] = useState(0);
 
+  // Debug
+  useEffect(() => {
+    console.log("HERO DATA =", data);
+    console.log("HERO IMAGES =", images);
+  }, [data, images]);
+
   // =========================
-  // 🔁 RESET SLIDER WHEN DATA CHANGES
+  // RESET SLIDER WHEN DATA CHANGES
   // =========================
   useEffect(() => {
     setIndex(0);
   }, [images]);
 
   // =========================
-  // ⏱ AUTO SLIDER
+  // AUTO SLIDER
   // =========================
   useEffect(() => {
     if (images.length <= 1) return;
 
-    const t = setInterval(() => {
+    const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % images.length);
     }, 3500);
 
-    return () => clearInterval(t);
+    return () => clearInterval(timer);
   }, [images]);
 
   return (
     <section className={styles.hero}>
-
-      {/* =========================
-          🖼 SLIDER
-      ========================= */}
+      {/* Slider */}
       <div
         className={styles.slider}
         style={{
@@ -73,26 +80,22 @@ export default function HeroSection({ data }: Props) {
         {images.map((img, i) => (
           <div key={i} className={styles.slide}>
             <img
-              src={img || "/default.jpg"}
+              src={img}
               alt={`travel-${i}`}
               className={styles.image}
               loading="lazy"
               onError={(e) => {
-                (e.currentTarget as HTMLImageElement).src = "/default.jpg";
+                e.currentTarget.src = "/default.jpg";
               }}
             />
           </div>
         ))}
       </div>
 
-      {/* =========================
-          🌫 OVERLAY
-      ========================= */}
+      {/* Overlay */}
       <div className={styles.overlay} />
 
-      {/* =========================
-          📌 CONTENT
-      ========================= */}
+      {/* Content */}
       <div className={styles.content}>
         <h1 className={styles.title}>
           {data?.title || "Amazing Trip"}
@@ -107,7 +110,6 @@ export default function HeroSection({ data }: Props) {
           Download Itinerary
         </button>
       </div>
-
     </section>
   );
 }
