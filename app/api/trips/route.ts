@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
+import cloudinary from "@/lib/cloudinary";
 
 const clean = (val: FormDataEntryValue | null) =>
   typeof val === "string" ? val.replace(/^"|"$/g, "").trim() : "";
@@ -14,6 +15,27 @@ const safeParse = (value: FormDataEntryValue | null) => {
     return [];
   }
 };
+
+// upload helper
+async function uploadToCloudinary(file: File) {
+  const bytes = await file.arrayBuffer();
+  const buffer = Buffer.from(bytes);
+
+  return new Promise<string>((resolve, reject) => {
+    cloudinary.uploader
+      .upload_stream(
+        {
+          folder: "travel-trips",
+          resource_type: "image",
+        },
+        (error, result) => {
+          if (error) return reject(error);
+          resolve(result?.secure_url || "");
+        }
+      )
+      .end(buffer);
+  });
+}
 
 export async function POST(req: Request) {
   try {
@@ -31,15 +53,41 @@ export async function POST(req: Request) {
     const pickupDrop = clean(formData.get("pickupDrop"));
     const routeLine = clean(formData.get("routeLine"));
 
-    const banner: string[] = [];
-    const images: string[] = [];
-
     const itinerary = safeParse(formData.get("itinerary"));
     const inclusions = safeParse(formData.get("inclusions"));
     const exclusions = safeParse(formData.get("exclusions"));
     const otherInfo = safeParse(formData.get("otherInfo"));
     const similarTrips = safeParse(formData.get("similarTrips"));
 
+    // =========================
+    // Upload Banner Images
+    // =========================
+    const bannerFiles = formData.getAll("banner") as File[];
+    const banner: string[] = [];
+
+    for (const file of bannerFiles) {
+      if (file && file.size > 0) {
+        const url = await uploadToCloudinary(file);
+        banner.push(url);
+      }
+    }
+
+    // =========================
+    // Upload Gallery Images
+    // =========================
+    const galleryFiles = formData.getAll("images") as File[];
+    const images: string[] = [];
+
+    for (const file of galleryFiles) {
+      if (file && file.size > 0) {
+        const url = await uploadToCloudinary(file);
+        images.push(url);
+      }
+    }
+
+    // =========================
+    // Save DB
+    // =========================
     const trip = await prisma.trip.create({
       data: {
         slug,
