@@ -4,18 +4,18 @@ import { useRef } from "react";
 import styles from "./PopularDestinations.module.css";
 
 const cards = [
-  { title: "Leh Ladakh", price: "15,800", img: "/ladakh (1).Avif" },
-  { title: "Spiti", price: "16,499", img: "/spiti.Avif" },
-  { title: "Kashmir", price: "24,499", img: "/kashmir-romantic-02.Avif" },
-  { title: "Meghalaya", price: "21,499", img: "/meghalaya.Avif" },
-  { title: "Himachal", price: "6,999", img: "/himachal.Avif" },
-  { title: "Sikkim", price: "14,499", img: "/sikkim.Avif" },
-  { title: "Arunachal Pardesh", price: "32,999", img: "/Arunachal-Pradesh-img.Avif" },
-  { title: "Uttarakhand", price: "5,499", img: "/uttarakhand.Avif" },
-  { title: "Nagaland", price: "30,499", img: "/nagaland-image-portrait-1.Avif" },
-  { title: "Rajsthan", price: "15,499", img: "/rajasthan.Avif" },
-  { title: "Andaman", price: "29,499", img: "/andaman.Avif" },
-  { title: "Kerala", price: "14,999", img: "/kerala.Avif" },
+  { title: "Leh Ladakh", price: "15,800", img: "/ladakh (1).avif" },
+  { title: "Spiti", price: "16,499", img: "/spiti.avif" },
+  { title: "Kashmir", price: "24,499", img: "/kashmir-romantic-02.avif" },
+  { title: "Meghalaya", price: "21,499", img: "/meghalaya.avif" },
+  { title: "Himachal", price: "6,999", img: "/himachal.avif" },
+  { title: "Sikkim", price: "14,499", img: "/sikkim.avif" },
+  { title: "Arunachal Pardesh", price: "32,999", img: "/Arunachal-Pradesh-img.avif" },
+  { title: "Uttarakhand", price: "5,499", img: "/uttarakhand.avif" },
+  { title: "Nagaland", price: "30,499", img: "/nagaland-image-portrait-1.avif" },
+  { title: "Rajsthan", price: "15,499", img: "/rajasthan.avif" },
+  { title: "Andaman", price: "29,499", img: "/andaman.avif" },
+  { title: "Kerala", price: "14,999", img: "/kerala.avif" },
 ];
 
 export default function PopularDestinations() {
