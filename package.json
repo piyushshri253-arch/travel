@@ -31,7 +31,7 @@
     "react": "latest",
     "react-dom": "latest",
     "react-quill": "^2.0.0",
-    "swiper": "^12.1.1"
+    "swiper": "^12.1.4"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.18",
