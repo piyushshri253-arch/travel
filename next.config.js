@@ -11,18 +11,9 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "res.cloudinary.com", // ✅ ADD THIS
+        hostname: "res.cloudinary.com",
       },
     ],
-  },
-
-  async rewrites() {
-    return [
-      {
-        source: "/:slug",
-        destination: "/destinations/:slug",
-      },
-    ];
   },
 };
 
