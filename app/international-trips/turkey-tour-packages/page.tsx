@@ -13,11 +13,11 @@ export default function VietnamTourPackagesPage() {
     <>
       <Hero data={data} />
 
-      <PopularDestination
-//        heading={data.heading}
+     {/* / <PopularDestination
+        heading={data.heading}
         description={data.description}
         trips={data.trips}
-      />
+      /> */}
 
       <CommunityTrips
         heading={data.community.heading}
