@@ -1,0 +1,177 @@
+"use client";
+
+import { useState } from "react";
+import { Search, MapPin, Calendar, Clock } from "lucide-react";
+
+const tripsData = [
+  {
+    id: 1,
+    title: "8-Days Highlights of Europe Summer",
+    location: "Paris Airport - Europe",
+    duration: "7N/8D",
+    date: "8 May, 11 May",
+    price: "₹2,21,999",
+    image: "/europe.avif",
+    destination: "International",
+  },
+  {
+    id: 2,
+    title: "3D Kasol Kheerganga Trek",
+    location: "Delhi - Delhi",
+    duration: "2N/3D",
+    date: "8 May, 15 May",
+    price: "₹9,499",
+    image: "/kasol.avif",
+    destination: "India",
+  },
+  {
+    id: 3,
+    title: "Zanskar Trip from Manali",
+    location: "Delhi - Delhi",
+    duration: "2N/3D",
+    date: "8 May, 15 May",
+    price: "₹8,499",
+    image: "/ladakh.avif",
+    destination: "India",
+  },
+];
+
+const months = [
+  "May-26",
+  "Jun-26",
+  "Jul-26",
+  "Aug-26",
+  "Sep-26",
+  "Oct-26",
+  "Nov-26",
+  "Dec-26",
+  "Jan-27",
+];
+
+export default function UpcomingTrips() {
+  const [search, setSearch] = useState("");
+  const [selectedDestination, setSelectedDestination] = useState("All");
+
+  const filteredTrips = tripsData.filter((trip) => {
+    return (
+      (selectedDestination === "All" ||
+        trip.destination === selectedDestination) &&
+      trip.title.toLowerCase().includes(search.toLowerCase())
+    );
+  });
+
+  return (
+    <div className="p-6 bg-gray-50 min-h-screen">
+      {/* 🔍 Search Bar */}
+      <div className="mb-6 flex justify-between items-center">
+        <div className="relative w-full max-w-md">
+          <Search className="absolute left-3 top-3 text-gray-400" size={18} />
+          <input
+            type="text"
+            placeholder="Where do you want to go?"
+            className="w-full pl-10 pr-4 py-2 rounded-full border focus:outline-none"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+        </div>
+      </div>
+
+      {/* 📅 Month Tabs */}
+      <div className="flex gap-3 overflow-x-auto mb-6">
+        {months.map((m) => (
+          <button
+            key={m}
+            className="px-4 py-2 border rounded-lg whitespace-nowrap hover:bg-teal-500 hover:text-white"
+          >
+            {m}
+          </button>
+        ))}
+      </div>
+
+      <div className="grid grid-cols-12 gap-6">
+        {/* 🧰 Filters */}
+        <div className="col-span-3 bg-white p-4 rounded-xl shadow">
+          <h2 className="font-bold mb-4">Filters</h2>
+
+          {/* Destination */}
+          <div className="mb-4">
+            <h3 className="font-semibold mb-2">Destination</h3>
+            <div className="flex flex-col gap-2">
+              {["All", "India", "International"].map((d) => (
+                <button
+                  key={d}
+                  onClick={() => setSelectedDestination(d)}
+                  className={`text-left px-3 py-2 rounded ${
+                    selectedDestination === d
+                      ? "bg-teal-500 text-white"
+                      : "hover:bg-gray-100"
+                  }`}
+                >
+                  {d}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Duration */}
+          <div className="mb-4">
+            <h3 className="font-semibold mb-2">Duration (in nights)</h3>
+            <input type="range" min={1} max={15} className="w-full" />
+          </div>
+
+          {/* Budget */}
+          <div className="mb-4">
+            <h3 className="font-semibold mb-2">Budget</h3>
+            <input type="range" min={5000} max={400000} className="w-full" />
+          </div>
+
+          <button className="w-full mt-4 bg-teal-500 text-white py-2 rounded">
+            Apply
+          </button>
+        </div>
+
+        {/* 🧾 Cards */}
+        <div className="col-span-9 grid grid-cols-2 gap-4">
+          {filteredTrips.map((trip) => (
+            <div
+              key={trip.id}
+              className="bg-white rounded-xl shadow flex overflow-hidden"
+            >
+              <img
+                src={trip.image}
+                alt=""
+                className="w-40 h-full object-cover"
+              />
+
+              <div className="p-4 flex flex-col justify-between w-full">
+                <div>
+                  <h3 className="font-semibold text-lg">{trip.title}</h3>
+
+                  <div className="text-sm text-gray-500 mt-2 flex items-center gap-2">
+                    <Clock size={14} /> {trip.duration}
+                  </div>
+
+                  <div className="text-sm text-gray-500 flex items-center gap-2">
+                    <MapPin size={14} /> {trip.location}
+                  </div>
+
+                  <div className="text-sm text-gray-500 flex items-center gap-2">
+                    <Calendar size={14} /> {trip.date}
+                  </div>
+                </div>
+
+                <div className="flex justify-between items-center mt-3">
+                  <span className="font-bold text-lg">{trip.price}</span>
+
+                  <button className="bg-black text-white p-2 rounded-full">
+                    →
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}

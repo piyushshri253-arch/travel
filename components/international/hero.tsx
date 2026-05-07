@@ -1,26 +1,31 @@
 import styles from "./page.module.css";
 import { PhoneCall } from "lucide-react";
 
-export default function Hero() {
+type HeroData = {
+  title: string;
+  description: string;
+  price: string;
+};
+
+type HeroProps = {
+  data?: HeroData; // 👈 safe optional
+};
+
+export default function Hero({ data }: HeroProps) {
+  if (!data) return null; // 👈 safety check
+
   return (
     <section className={styles.hero}>
       <div className={styles.overlay} />
 
       <div className={styles.content}>
-        <h1>
-          Best Europe Tour Packages
-          <br />
-          from India
-        </h1>
+        <h1>{data.title}</h1>
 
-        <p>
-          Handpicked Europe Packages with Paris, Swiss Alps,
-          Nordic Beauty and More
-        </p>
+        <p>{data.description}</p>
 
         <div className={styles.price}>
           <span>Starting Price:</span>
-          <strong>Rs. 89,990/- Per Person</strong>
+          <strong>{data.price}</strong>
         </div>
 
         <button className={styles.btn}>

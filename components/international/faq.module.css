@@ -1,0 +1,40 @@
+.container {
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 26px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 700px;  /* 👈 center box width control */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.item {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  cursor: pointer;
+  background: #f9f9f9;
+}
+
+.answer {
+  padding: 15px;
+  background: #fff;
+}

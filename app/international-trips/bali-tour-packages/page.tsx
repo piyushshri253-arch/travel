@@ -8,7 +8,7 @@ import Hero from "../../../components/international/hero";
 import { internationalData } from "../../../data/internationalData";
 
 export default function EuropeTourPackagesPage() {
-  const europeData = internationalData.europe; // ya array hai to [0]
+  const europeData = internationalData.bali; // ya array hai to [0]
 
   return (
     <>
